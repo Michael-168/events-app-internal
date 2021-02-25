@@ -18,8 +18,8 @@ app.use(bodyParser.json());
 // from a cloud data store
 const mockEvents = {
     events: [
-        { title: 'an event', id: 1, description: 'something really cool' , date: '02/25/2021'},
-        { title: 'another event', id: 2, description: 'something even cooler', date: '02/26/2021' }
+        { title: 'an event', id: 1, description: 'something really cool' , location: 'Washington DC', date: '02/25/2021'},
+        { title: 'another event', id: 2, description: 'something even cooler', location: 'Crystal City', date: '02/26/2021' }
     ]
 };
 
@@ -51,6 +51,7 @@ app.post('/event', (req, res) => {
     const ev = { 
         title: req.body.title, 
         description: req.body.description,
+        location: req.body.location,
         date: req.body.date,        
         id : mockEvents.events.length + 1
      }
