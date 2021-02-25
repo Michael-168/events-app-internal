@@ -18,13 +18,13 @@ app.use(bodyParser.json());
 // from a cloud data store
 const mockEvents = {
     events: [
-        { title: 'an event', id: 1, description: 'something really cool' , location: 'Washington DC', date: '02/25/2021'},
+        { title: 'Michael\'s event', id: 1, description: 'something really cool' , location: 'Washington DC', date: '02/25/2021'},
         { title: 'another event', id: 2, description: 'something even cooler', location: 'Crystal City', date: '02/26/2021' }
     ]
 };
 
 
-
+// FeatA internal
 
 // health endpoint - returns an empty array
 app.get('/', (req, res) => {
